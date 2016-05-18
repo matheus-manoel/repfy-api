@@ -5,10 +5,18 @@ gem 'rails', '4.2.5'
 
 gem 'rails-api'
 
-gem 'spring', :group => :development
+gem 'active_model_serializers'
 
+group :development do
+	gem 'spring'
+  gem 'sqlite3'
+end
 
-gem 'sqlite3'
+group :test do
+  gem "rspec-rails", "~> 2.14"
+  gem "factory_girl_rails"
+  gem 'ffaker'
+end
 
 
 
